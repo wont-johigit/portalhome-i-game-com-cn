@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wont-johigit.github.io/portalhome-i-game-com-cn/sitemap.xml

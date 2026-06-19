@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf9f5;
+      font-family: system-ui, 'Noto Serif SC', 'Source Han Serif SC', Georgia, 'Times New Roman', serif;
+      line-height: 1.75;
+      color: #2c2b29;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fefdfa;
+      padding: 2.8rem 2.2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      border: 1px solid #eeeae1;
+    }
+
+    /* 开场短句 – 像题记 */
+    .opening-line {
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      color: #4f4b43;
+      border-left: 4px solid #c9b99a;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: #2f2c25;
+      letter-spacing: 0.02em;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #7b756a;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e8e2d5;
+      padding-bottom: 0.9rem;
+    }
+
+    .intro-text {
+      margin-bottom: 2rem;
+      text-align: justify;
+      font-size: 1rem;
+    }
+
+    .intro-text p {
+      margin-bottom: 1.2rem;
+    }
+
+    .highlight-link {
+      color: #8a6a4a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #cbb9a2;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .highlight-link:hover {
+      color: #543f2b;
+      border-bottom: 1px solid #543f2b;
+    }
+
+    /* 特点卡片区域 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 1.8rem;
+      margin: 2.4rem 0 2.5rem;
+    }
+
+    .feature-item {
+      background: #f6f2ea;
+      padding: 1.2rem 1.4rem;
+      border-radius: 14px;
+      border: 1px solid #e7e0d2;
+    }
+
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #3d382f;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .feature-item p {
+      font-size: 0.925rem;
+      color: #4e4a41;
+      line-height: 1.6;
+    }
+
+    /* 引用块 / 提示框 */
+    .note-block {
+      background: #f4efe6;
+      padding: 1.2rem 1.6rem;
+      border-left: 6px solid #b8a585;
+      border-radius: 0 10px 10px 0;
+      margin: 2rem 0 1.8rem;
+      font-size: 0.95rem;
+      color: #3f3b33;
+      line-height: 1.65;
+    }
+
+    .note-block strong {
+      color: #5f4e39;
+      font-weight: 600;
+    }
+
+    .faq-mini {
+      margin: 2.2rem 0 1.8rem;
+    }
+
+    .faq-mini dt {
+      font-weight: 500;
+      color: #463f33;
+      margin-top: 1.1rem;
+      margin-bottom: 0.2rem;
+      font-size: 0.98rem;
+    }
+
+    .faq-mini dd {
+      margin-left: 0;
+      padding-left: 0.6rem;
+      border-left: 2px solid #ddd6c9;
+      color: #4e4940;
+      font-size: 0.93rem;
+    }
+
+    .closing {
+      margin-top: 2.5rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid #e7e0d3;
+      font-size: 0.95rem;
+      color: #5d584e;
+      text-align: left;
+    }
+
+    .closing a {
+      color: #7f684b;
+      text-decoration: none;
+      border-bottom: 1px dotted #c0af98;
+    }
+
+    .closing a:hover {
+      border-bottom: 1px solid #5d4732;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+
+      .page {
+        padding: 1.8rem 1.2rem;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .opening-line {
+        font-size: 1.1rem;
+        padding-left: 0.9rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .feature-item {
+        padding: 1rem 1.1rem;
+      }
+
+      .note-block {
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .page {
+        padding: 1.2rem 0.9rem;
+      }
+
+      .subhead {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- 开场短句 -->
+  <div class="opening-line">
+    “一处经过整理的起点，为你引介关于游戏的一点看法与资源。”
+  </div>
+
+  <h1>爱游戏 · 站点介绍</h1>
+  <div class="subhead">从「可信」出发，理清游戏内容与信息的脉络</div>
+
+  <!-- 承接段落 -->
+  <div class="intro-text">
+    <p>
+      <a href="https://portalhome-i-game.com.cn" class="highlight-link">爱游戏</a> 
+      是一个围绕游戏资讯与体验分享所搭建的站点。它并非追逐流量的快讯平台，而是更希望以一种平稳、经过梳理的方式，呈现游戏相关的介绍、心得以及实用性信息。站内内容以清晰和诚实为基本态度，不对玩法做过度渲染，也不引导无意义的消费冲动。
+    </p>
+    <p>
+      许多人在查找游戏资料时，常常遇到信息过时、观点片面的情况。爱游戏的初衷是尽量过滤掉这些干扰，把经过验证或者有参考价值的说明整理出来，让读者能够获得相对可靠的判断依据。无论你是刚开始接触某类作品，还是想了解某个游戏的基础机制，这里都尝试给出实在的说明。
+    </p>
+  </div>
+
+  <!-- 特点列表（两列卡片） -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <h3>内容整理</h3>
+      <p>对游戏背景、基础功能、常见疑问进行归纳，避免零散堆砌。每篇介绍都力求结构清晰，方便按需查阅。</p>
+    </div>
+    <div class="feature-item">
+      <h3>可信优先</h3>
+      <p>引用信息时注明来源或官方说明，减少模糊表述。站内不采用夸大标题或虚假描述，以真实为写作前提。</p>
+    </div>
+    <div class="feature-item">
+      <h3>保持中立</h3>
+      <p>不捆绑立场，不刻意推崇某一作品或平台。读者可以依据自己的兴趣，从介绍中获得足够客观的参考。</p>
+    </div>
+    <div class="feature-item">
+      <h3>简洁阅读</h3>
+      <p>排版注重可读性，减少装饰性元素。内容适配手机与桌面，让信息获取过程更加直接。</p>
+    </div>
+  </div>
+
+  <!-- 引用块 / 提示框 -->
+  <div class="note-block">
+    <strong>一点说明：</strong> 
+    爱游戏并非商业推广站，也不代运营任何游戏服务。站内提供的信息均来自公开资料及实际体验，如有变化请以游戏官方最新公告为准。如果你发现内容存在遗漏或需要更正的地方，欢迎依据站点中体现的方式反馈。
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <dl class="faq-mini">
+    <dt>爱游戏适合哪些人访问？</dt>
+    <dd>对游戏有一定兴趣、希望快速了解某款作品概况的玩家；以及想查阅基础机制、版本差异等客观内容的读者。</dd>
+
+    <dt>站内内容更新频率如何？</dt>
+    <dd>不追求日更，但会持续补充有代表性的游戏介绍。每篇文章在发布前都会经过二次核对，确保信息相对准确。</dd>
+
+    <dt>我可以转载或分享站内文章吗？</dt>
+    <dd>可以基于非商业目的分享，但请保留原文链接及署名。具体可参考站点内页的版权说明。</dd>
+  </dl>
+
+  <!-- 温和结尾 -->
+  <div class="closing">
+    <p>
+      如果你希望进一步了解某个游戏或浏览已有的介绍，不妨前往 
+      <a href="https://portalhome-i-game.com.cn">爱游戏</a> 
+      自行翻阅。页面中不含强制跳转，也没有隐藏推广，你看到的即是站方认真整理后的样貌。愿你在浏览过程中获得清晰、有帮助的参考。
+    </p>
+  </div>
+</div>
+</body>
+</html>
