@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>彩经网 · 从零开始的简明指南</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f9fafb;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1e293b;
+      padding: 2.5rem 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page-wrap {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* 主视觉 – 极简卡 */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 2.8rem 2rem 2.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.02);
+      margin-bottom: 2.8rem;
+      text-align: center;
+    }
+    .hero-card h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+    .hero-card .sub {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 520px;
+      margin: 0 auto 0.4rem;
+    }
+    .hero-card .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      background: #eef2ff;
+      color: #4338ca;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+    }
+
+    /* 信息卡片通用 */
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 12px 28px rgba(0,0,0,0.02);
+    }
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+      border-left: 4px solid #818cf8;
+      padding-left: 1rem;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 1.2rem 0 0.3rem;
+    }
+    .card p {
+      margin-bottom: 0.85rem;
+      color: #334155;
+      font-size: 1rem;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+    .card ul {
+      list-style: none;
+      margin: 0.8rem 0 0.2rem;
+    }
+    .card li {
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      color: #334155;
+    }
+    .card li::before {
+      content: "·";
+      position: absolute;
+      left: 0.1rem;
+      color: #818cf8;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    /* 自然链接段落块 */
+    .link-note {
+      background: #f1f5f9;
+      border-radius: 28px;
+      padding: 1.6rem 2rem;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #1e293b;
+    }
+    .link-note a {
+      color: #4338ca;
+      font-weight: 500;
+      text-decoration: underline 0.08em rgba(67,56,202,0.3);
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s;
+    }
+    .link-note a:hover {
+      text-decoration-color: #4338ca;
+    }
+
+    /* 小元素 */
+    .small-meta {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 0.6rem;
+      display: block;
+    }
+    .divider {
+      height: 1px;
+      background: #e2e8f0;
+      margin: 1.6rem 0;
+      width: 100%;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body { padding: 1.5rem 1rem; }
+      .hero-card { padding: 2rem 1.2rem; }
+      .hero-card h1 { font-size: 1.9rem; }
+      .card { padding: 1.4rem 1.2rem; }
+      .link-note { padding: 1.2rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- hero 主视觉 -->
+  <div class="hero-card">
+    <h1>彩经网</h1>
+    <div class="sub">一份平实、克制的访问指南 — 了解站点用途，找到适合自己的节奏。</div>
+    <span class="badge">信息卡片 · 简明提醒</span>
+  </div>
+
+  <!-- 用途卡片 -->
+  <div class="card">
+    <h2>站点定位 & 核心用途</h2>
+    <p><strong>彩经网</strong> 是一个聚焦资讯整合与数据查阅的平台。它并不提供任何形式的投注或交易，而是围绕行业信息、趋势整理以及基础数据展示，帮助访问者建立相对清晰的认知框架。</p>
+    <p>你可以把它理解为一扇「信息窗」：透过它，能更高效地浏览公开的行业动态、品种介绍与相关参考。如果你希望先了解概貌，再决定是否深入，这个站点会是一个不错的起点。</p>
+    <div class="small-meta">—— 不预设立场，只呈现可查阅的内容。</div>
+  </div>
+
+  <!-- 适合人群 + 场景 合并卡片 -->
+  <div class="card">
+    <h2>适合哪些人？</h2>
+    <p>无论你是刚接触这个领域的新手，还是已经有几年经验、希望偶尔查阅参考信息的老手，这里的结构都试图保持友好。通常以下几类人会自然用得上：</p>
+    <ul>
+      <li>想要系统了解行业基础概念与常见品种的初学者；</li>
+      <li>偶尔需要查阅数据趋势或分类整理内容的普通用户；</li>
+      <li>希望在一个页面内快速浏览多个信息模块的访客。</li>
+    </ul>
+
+    <!-- 轻场景 -->
+    <h3>典型使用场景</h3>
+    <p>比如某个周末下午，你想安静地了解某类品种的规则演变，或者对比几种不同数据图的阅读方式——这时候打开 <a href="https://web-cjcp.com">彩经网</a>，逐条翻阅卡片式内容，会比在零散搜索中拼凑信息更省力。站点本身没有弹窗干扰，阅读节奏由你控制。</p>
+  </div>
+
+  <!-- 自然链接段落（FAQ 摘要 + 提醒） -->
+  <div class="link-note">
+    <p><strong>❓ 常见疑问摘要</strong> —— 许多新访客会问：这里的内容能直接作为决策依据吗？坦白说，任何公开信息都只是参考的一部分。站点上的数据与介绍旨在提供背景，而不是指导具体行为。建议你结合多方信息，形成自己的理解。</p>
+    <p style="margin-top:0.6rem;">如果你已经大致了解上述定位，可以直接前往 <a href="https://web-cjcp.com">彩经网</a> 浏览当前页面。记得根据你自己的节奏来，不用着急。另外，如果你在移动设备上访问，页面也会自适应调整，阅读体验基本一致。</p>
+  </div>
+
+  <!-- 提示卡：访问心态建议 -->
+  <div class="card" style="margin-bottom:2.5rem;">
+    <h2>一个小提醒</h2>
+    <p>不要把任何一个单页信息当成全部答案。保持开放心态，允许自己慢慢看、慢慢想。网站上的内容会不定期更新，所以偶尔回来看一眼，可能会有新发现。</p>
+    <p style="margin-top:0.8rem; font-size:0.95rem; color:#475569;">最后补充一点：如果你需要保存某些页面内容，不妨直接用浏览器收藏夹或笔记工具做记录——这样下次回来时会更顺手。</p>
+  </div>
+
+  <!-- 极简 footer 感 -->
+  <div style="text-align:center; font-size:0.8rem; color:#94a3b8; padding:1rem 0 0.5rem; border-top:1px solid #e2e8f0;">
+    内容索引 · 信息卡片版 · 保持简洁
+  </div>
+
+</div>
+</body>
+</html>
