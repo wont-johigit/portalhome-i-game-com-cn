@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>彩经网 — 专业数据支持平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      background: #f2f4f8;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #0b1a2e 0%, #142b44 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      color: #e2e8f0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 8px);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      color: #b0c4de;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(4px);
+      padding: 0.5rem 1.4rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #bdd3eb;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px solid #e9edf2;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #111827;
+      border-left: 4px solid #2a5b8c;
+      padding-left: 0.75rem;
+    }
+
+    .card p {
+      color: #374151;
+      font-size: 0.98rem;
+    }
+
+    .icon-feature {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2rem 0 0;
+    }
+
+    .icon-feature .item {
+      flex: 1 1 160px;
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .icon-feature .item span {
+      display: block;
+      font-size: 1.7rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .icon-feature .item strong {
+      font-size: 0.95rem;
+      color: #1e293b;
+    }
+
+    .faq-section {
+      background: white;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .faq-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .faq-grid details {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #edf2f7;
+      padding-bottom: 0.8rem;
+    }
+
+    .faq-grid summary {
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      color: #1e293b;
+      font-size: 1rem;
+    }
+
+    .faq-grid details p {
+      margin-top: 0.6rem;
+      color: #4b5563;
+      font-size: 0.93rem;
+      padding-left: 0.5rem;
+    }
+
+    .bottom-links {
+      background: #f2f4f8;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .bottom-links a {
+      color: #2a5b8c;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #2a5b8c;
+      margin: 0 0.6rem;
+      transition: color 0.2s;
+    }
+
+    .bottom-links a:hover {
+      color: #1e3a5f;
+      border-bottom-style: solid;
+    }
+
+    .bottom-links .sep {
+      color: #94a3b8;
+      margin: 0 0.3rem;
+    }
+
+    .bottom-links p {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .emph-link {
+      color: #1d4d7a;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid #1d4d7a;
+      transition: 0.15s;
+    }
+
+    .emph-link:hover {
+      background: #eef4fa;
+    }
+
+    .disclaimer {
+      background: #f0f3f7;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.85rem;
+      color: #4b5563;
+      text-align: center;
+      border-top: 1px solid #dde3ed;
+    }
+
+    .disclaimer a {
+      color: #1d4d7a;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>彩经网 · 数据与信息参考</h1>
+  <p>基于公开数据整理，提供趋势统计、历史分布与常识性内容，辅助用户自主判断。</p>
+  <div class="tagline">客观 · 克制 · 结构化</div>
+</section>
+
+<div class="section-wrap">
+  <div class="intro-grid">
+    <div class="card">
+      <h3>站点定位</h3>
+      <p>「<a href="https://root-caijing.com" class="emph-link">彩经网</a>」是一个围绕彩市相关数据进行整理与展示的静态信息站点。我们不提供投注、预测或任何诱导性建议，仅呈现可查询的历史比对、频率分布及基础统计。所有内容均来自公开合法渠道，并持续保持更新节奏。</p>
+    </div>
+    <div class="card">
+      <h3>内容构成</h3>
+      <p>主要涵盖：号码冷热走势、区间统计、奇偶／大小比例、和值分布等常见分析维度。每项数据均附带说明及数据范围，便于用户结合自身经验进行参照。站点不设会员、不收集隐私信息。</p>
+    </div>
+  </div>
+
+  <div class="icon-feature">
+    <div class="item">
+      <span>📊</span>
+      <strong>频率统计</strong>
+    </div>
+    <div class="item">
+      <span>📅</span>
+      <strong>区间分布</strong>
+    </div>
+    <div class="item">
+      <span>🔍</span>
+      <strong>结构比对</strong>
+    </div>
+    <div class="item">
+      <span>🧾</span>
+      <strong>常识说明</strong>
+    </div>
+  </div>
+</div>
+
+<section class="faq-section">
+  <div class="faq-grid">
+    <h3 style="margin-bottom:1.2rem; font-weight:600; color:#0f172a;">常见疑问摘要</h3>
+    <details>
+      <summary>彩经网的数据来源是哪里？</summary>
+      <p>所有数据均来自合规公开的历史开奖记录，经整理后以可视化表格呈现。站点不存储用户信息，也不接入任何第三方交易接口。</p>
+    </details>
+    <details>
+      <summary>是否提供推荐或预测？</summary>
+      <p>不提供。本网站仅展现已有数据的排列组合与统计关系，不包含任何趋势预测、算法推荐或胜率暗示。每个页面均附有风险提示。</p>
+    </details>
+    <details>
+      <summary>信息更新频率如何？</summary>
+      <p>通常在每次合法开奖结果公示后同步更新相关统计图表。用户可关注页面顶部说明区域了解最新数据批次。</p>
+    </details>
+    <details>
+      <summary>使用站点需要注册吗？</summary>
+      <p>完全不需要。所有内容均开放浏览，无需登录、无需绑定任何账户，且页面不含广告弹窗。</p>
+    </details>
+  </div>
+</section>
+
+<div class="bottom-links">
+  <a href="https://root-caijing.com">彩经网</a>
+  <span class="sep">·</span>
+  <a href="https://root-caijing.com">彩经网</a>
+  <span class="sep">·</span>
+  <a href="https://root-caijing.com">彩经网</a>
+  <p>本站内容仅供参考，不构成任何行为建议。请理性对待，量力而行。</p>
+</div>
+
+<div class="disclaimer">
+  <strong>重要提示：</strong> 本网站为纯粹信息展示平台，不涉及任何形式的投注、博彩或资金交易。访问即代表您已理解并接受相关风险。更多内容请直接访问 <a href="https://root-caijing.com">彩经网</a>。
+</div>
+
+</body>
+</html>
